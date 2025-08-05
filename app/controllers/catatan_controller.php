@@ -73,8 +73,8 @@ switch ($action) {
             );
             
             if ($result) {
-                // Redirect langsung ke halaman utama
-                header('Location: /index.php');
+                // Redirect ke halaman catatan perjalanan
+                header('Location: /app/dashboard.php?view=catatan_perjalanan');
                 exit;
             } else {
                 // Jika gagal, tampilkan error
@@ -121,8 +121,8 @@ switch ($action) {
             );
             
             if ($result) {
-                // Redirect langsung ke halaman utama
-                header('Location: /index.php');
+                // Redirect ke halaman catatan perjalanan
+                header('Location: /app/dashboard.php?view=catatan_perjalanan');
                 exit;
             } else {
                 // Jika gagal, tampilkan error
@@ -140,17 +140,15 @@ switch ($action) {
             $id = (int)$_GET['id'];
             $result = delete_catatan($id, $user_id);
             
-            header('Content-Type: application/json');
             if ($result) {
-                echo json_encode(['success' => true, 'message' => 'Catatan berhasil dihapus']);
+                header('Location: /app/dashboard.php?view=catatan_perjalanan');
+                exit;
             } else {
-                echo json_encode(['success' => false, 'message' => 'Catatan tidak ditemukan atau Anda tidak memiliki akses']);
+                header('Location: /app/dashboard.php?view=catatan_perjalanan&error=delete_failed');
+                exit;
             }
         } else {
-            header('Content-Type: application/json');
-            echo json_encode(['success' => false, 'message' => 'ID catatan tidak ditemukan']);
+            header('Location: /app/dashboard.php?view=catatan_perjalanan&error=no_id');
+            exit;
         }
-        break;
-
-
 }

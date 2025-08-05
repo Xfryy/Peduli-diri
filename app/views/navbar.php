@@ -49,7 +49,7 @@ if (isset($_SESSION['foto']) && $_SESSION['foto']) {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link px-3 mx-1" href="/index.php"">
+                            <a class="nav-link px-3 mx-1" href="/app/dashboard.php">
                                 <i class="bi bi-house-door-fill me-1"></i> Home
                             </a>
                         </li>

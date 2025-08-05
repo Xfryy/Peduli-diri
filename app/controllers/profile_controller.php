@@ -98,8 +98,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['nik'] = $userBaru['nik'];
             $_SESSION['foto'] = $userBaru['foto'];
             
-            // Redirect langsung ke halaman utama
-            header('Location: /index.php');
+            // Redirect ke halaman dashboard
+            header('Location: /app/dashboard.php');
             exit;
         } else {
             header('Content-Type: application/json');

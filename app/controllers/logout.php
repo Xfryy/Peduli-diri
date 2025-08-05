@@ -6,6 +6,6 @@ session_unset();
 session_destroy();
 
 // Redirect ke halaman login
-header('Location: /app/controllers/auth.php?action=login');
+header('Location: /Catatan-perjalanan/Peduli-diri/index.php');
 exit;
 ?>

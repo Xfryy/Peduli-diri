@@ -19,7 +19,7 @@ function login() {
             $_SESSION['nama_lengkap'] = $user['nama_lengkap'];
             $_SESSION['nik'] = $user['nik'];
             $_SESSION['foto'] = $user['foto'];
-            header('Location: /index.php');
+            header('Location: /app/dashboard.php');
             exit;
         } else {
             show_login_form('NIK atau Nama Lengkap salah!');
@@ -31,7 +31,7 @@ function login() {
 
 function logout() {
     session_destroy();
-    header('Location: /app/controllers/auth.php?action=login');
+    header('Location: /index.php');
     exit;
 }
 
