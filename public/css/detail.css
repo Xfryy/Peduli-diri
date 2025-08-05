@@ -1,0 +1,79 @@
+.detail-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.detail-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.detail-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.detail-item {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+.detail-item:last-child {
+    border-bottom: none;
+}
+.detail-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.25rem;
+}
+.suhu-normal { color: #28a745; font-weight: 500; }
+.suhu-tinggi { color: #dc3545; font-weight: bold; }
+.btn-action {
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.print-header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+.print-header h2 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.print-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #6c757d;
+    display: none;
+}
+.badge {
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    border-radius: 6px;
+}
+@media print {
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #fff;
+        color: #000;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .print-header, .print-footer {
+        display: block;
+    }
+    .detail-card {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
+    }
+    .detail-item {
+        border-bottom: 1px solid #dee2e6;
+    }
+} 

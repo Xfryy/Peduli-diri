@@ -1,0 +1,53 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.login-card, .register-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+.login-card:hover, .register-card:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5rem;
+}
+.register-card .card-header {
+    background-color: #28a745;
+}
+.form-control {
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.btn-action {
+    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.app-title {
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+.app-subtitle {
+    color: #6c757d;
+    margin-bottom: 2rem;
+} 

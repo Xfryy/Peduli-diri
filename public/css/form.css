@@ -1,0 +1,36 @@
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.form-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: all 0.3s ease;
+}
+.form-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.required-field::after {
+    content: " *";
+    color: #dc3545;
+}
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.btn-action {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-action:hover {
+    transform: translateY(-2px);
+} 

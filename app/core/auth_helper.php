@@ -1,0 +1,2 @@
+<?php
+// Helper for authentication
